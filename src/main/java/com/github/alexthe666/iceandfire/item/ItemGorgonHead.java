@@ -96,20 +96,20 @@ public class ItemGorgonHead extends Item implements ICustomRendered {
             if (pointedEntity instanceof EntityLiving || pointedEntity instanceof EntityPlayer) {
                 if (pointedEntity instanceof EntityPlayer) {
                     pointedEntity.playSound(IafSoundRegistry.GORGON_TURN_STONE, 1, 1);
-                    pointedEntity.attackEntityFrom(IceAndFire.gorgon, Integer.MAX_VALUE);
+                    /*pointedEntity.attackEntityFrom(IceAndFire.gorgon, Integer.MAX_VALUE);
                     EntityStoneStatue statue = new EntityStoneStatue(worldIn);
                     statue.setPositionAndRotation(pointedEntity.posX, pointedEntity.posY, pointedEntity.posZ, pointedEntity.rotationYaw, pointedEntity.rotationPitch);
                     statue.smallArms = true;
                     if (!worldIn.isRemote) {
                         worldIn.spawnEntity(statue);
-                    }
+                    }*/
                 } else {
-                    StoneEntityProperties properties = EntityPropertiesHandler.INSTANCE.getProperties(pointedEntity, StoneEntityProperties.class);
+                    /*StoneEntityProperties properties = EntityPropertiesHandler.INSTANCE.getProperties(pointedEntity, StoneEntityProperties.class);
                     if (properties != null) {
                         properties.isStone = true;
                     }
-                    IceAndFire.NETWORK_WRAPPER.sendToServer(new MessageStoneStatue(pointedEntity.getEntityId(), true));
-                    if (pointedEntity instanceof EntityDragonBase) {
+                    IceAndFire.NETWORK_WRAPPER.sendToServer(new MessageStoneStatue(pointedEntity.getEntityId(), true));*/
+                    /*if (pointedEntity instanceof EntityDragonBase) {
                         EntityDragonBase dragon = (EntityDragonBase) pointedEntity;
                         dragon.setFlying(false);
                         dragon.setHovering(false);
@@ -122,7 +122,7 @@ public class ItemGorgonHead extends Item implements ICustomRendered {
                     }
                     if (pointedEntity instanceof IDropArmor) {
                         ((IDropArmor) pointedEntity).dropArmor();
-                    }
+                    }*/
                 }
 
                 if (pointedEntity instanceof EntityGorgon) {
